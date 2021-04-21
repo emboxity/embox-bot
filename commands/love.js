@@ -3,7 +3,7 @@ const pfp = `https://i.imgur.com/8yAwoai.png`
 
 module.exports = {
     name: 'love',
-    description: 'random cat image',
+    description: 'gimme love xoxo',
     run: async(client, message, args) =>{
         const target = message.mentions.members.first()
         const random = Math.floor(Math.random()*100)
