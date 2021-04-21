@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const { Guild } = require("discord.js");
 const pfp = `https://i.imgur.com/8yAwoai.png`
 
 
