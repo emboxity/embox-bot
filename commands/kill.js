@@ -22,7 +22,7 @@ module.exports = {
         .setColor('#000000')
         .setFooter('Embox Bot * made by shiba#2254',pfp)
         .setAuthor(message.author.username, message.author.displayAvatarURL())
-        .setDescription(`${target} ${options[Math.floor(Math.random() * options.length)]}, may their soul rest in piece. :skull:`)
+        .setDescription(`${target} ${options[Math.floor(Math.random() * options.length)]}, may their soul rest in peace. :skull:`)
         message.channel.send(kill)
 
     
