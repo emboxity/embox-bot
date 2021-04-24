@@ -2,8 +2,8 @@ require("dotenv").config()
 
 const fs = require('fs');
 
-const Discord = require('discord.js');
 
+const Discord = require('discord.js');
 
 const prefix = '+'
 
@@ -41,7 +41,27 @@ client.on('ready', () =>{
     };
 
     setStatus();
-    setInterval(() => setStatus(), 3600000);   
+    setInterval(() => setStatus(), 3600000);  
+    
+    
+    client.on('guildMemberAdd', async newMember => {
+        const welcomeChannel = newMember.guild.channels.cache.find(channel => channel.name === 'welcome')
+        const { guild } = newMember
+        if (!welcomeChannel) {
+            guild.channels.create('Welcome', { reason: 'Welcoming people' })
+            return;
+        }
+
+        
+        const avatar = newMember.displayAvatarURL
+            let msgEmbed = new Discord.MessageEmbed()
+            .setDescription(`${newMember} Welcome to ${guild}!`)
+            .setColor("#00000")
+            .setFooter('Embox Bot * made by shiba#2254',pfp)
+            .setImage(avatar)
+            welcomeChannel.send(msgEmbed)
+            newMember.send(`Welcome to ${guild}. I hope you enjoy your time here!`); 
+        })
 })
 
 
@@ -113,8 +133,8 @@ client.on('message', message => {
     }
 
 
-    
 
-})
+});
+
     
 client.login(process.env.DISCORD_TOKEN)
