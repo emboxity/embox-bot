@@ -1,8 +1,13 @@
+const db = require('quick.db');
+
 module.exports = {
     name:"pp",
     desscription: "Shows a targets PP size.",
 
     run: (client, message, args) => {
+
+        db.add('times.pp', 1); 
+        const timesUsed = db.get('times.pp');
 
         const random = Math.floor(Math.random()*10)
         console.log(random)
@@ -28,24 +33,24 @@ module.exports = {
     const ppembedsmall = new DiscordJS.MessageEmbed()
         .setTitle(`${ppargs0}'s pp`)
         .setColor(message.member.displayHexColor)
-        .setFooter('Embox Bot * Made by shiba#2254', pfp)
-        .setDescription(`${ppsize}
-        SHMEET`)
+        .setFooter(`${timesUsed} uses`)
+        .setDescription(`${ppsize}`)
+        .addField(`SHMEET`,`Go grow one`)
 
 
         const ppembedmedium = new DiscordJS.MessageEmbed()
         .setTitle(`${ppargs0}'s pp`)
         .setColor(message.member.displayHexColor)
-        .setFooter('Embox Bot * Made by shiba#2254', pfp)
-        .setDescription(`${ppsize}
-        Not bad`)
+        .setFooter(`${timesUsed} uses`)
+        .setDescription(`${ppsize}`)
+        .addField('Not bad',`Needs some growing`)
 
         const ppembedlarge = new DiscordJS.MessageEmbed()
         .setTitle(`${ppargs0}'s pp`)
         .setColor(message.member.displayHexColor)
-        .setFooter('Embox Bot * Made by shiba#2254', pfp)
-        .setDescription(`${ppsize}
-        Bro got a big one`)
+        .setFooter(`${timesUsed} uses`)
+        .setDescription(`${ppsize}`)
+        .addField('Bro got a big one',`Sheesh my g`)
         if(random <= 3){
             message.channel.send(ppembedsmall)
         }
@@ -66,25 +71,24 @@ module.exports = {
     const ppembedsmall1 = new DiscordJS.MessageEmbed()
     .setTitle(`${author}'s pp`)
     .setColor(message.member.displayHexColor)
-    .setFooter('Embox Bot * Made by shiba#2254', pfp)
-    .setDescription(`${ppsize}
-    SHMEET`)
+    .setFooter(`${timesUsed} uses`)
+    .setDescription(`${ppsize}`)
+    .addField(`SHMEET`,`Go grow one`)
 
 
     const ppembedmedium1 = new DiscordJS.MessageEmbed()
     .setTitle(`${author}'s pp`)
     .setColor(message.member.displayHexColor)
-    .setFooter('Embox Bot * Made by shiba#2254', pfp)
-    .setDescription(`${ppsize}
-    Not bad`)
+    .setFooter(`${timesUsed} uses`)
+    .setDescription(`${ppsize}`)
+    .addField('Not bad',`Needs some growing`)
 
     const ppembedlarge1 = new DiscordJS.MessageEmbed()
     .setTitle(`${author}'s pp`)
     .setColor(message.member.displayHexColor)
-    .setFooter('Embox Bot * Made by shiba#2254', pfp)
-    .setDescription(`${ppsize}
-    Bro got a big one`)
-
+    .setFooter(`${timesUsed} uses`)
+    .setDescription(`${ppsize}`)
+    .addField('Bro got a big one',`Sheesh my g`)
         
 
         if(random <= 3){
