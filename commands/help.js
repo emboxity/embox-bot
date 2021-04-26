@@ -378,5 +378,124 @@ module.exports = {
         )
         message.channel.send(definehelp)
 } 
+    if(args [0] == 'duck'){
+        const duckhelp = new Discord.MessageEmbed()
+        .setTitle('Command: +duck')
+        .setColor('#000000')
+        .setFooter('Embox Bot * made by shiba#2254',pfp)
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
+        .setDescription(`Requested by ${message.author}`)
+        .addFields(
+            { 
+              name: `Description:`,
+              value: `
+              Displays a duck image
+              
+              **Usage:**
+              +duck`,
+            },
+        )
+        message.channel.send(duckhelp)
+} 
+    if(args [0] == 'meme'){
+        const memehelp = new Discord.MessageEmbed()
+        .setTitle('Command: +meme')
+        .setColor('#000000')
+        .setFooter('Embox Bot * made by shiba#2254',pfp)
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
+        .setDescription(`Requested by ${message.author}`)
+        .addFields(
+            { 
+              name: `Description:`,
+              value: `
+              Displays a meme.
+              
+              **Usage:**
+              +meme`,
+            },
+        )
+        message.channel.send(memehelp)
+} 
+    if(args [0] == 'pp'){
+        const pphelp = new Discord.MessageEmbed()
+        .setTitle('Command: +pp')
+        .setColor('#000000')
+        .setFooter('Embox Bot * made by shiba#2254',pfp)
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
+        .setDescription(`Requested by ${message.author}`)
+        .addFields(
+            { 
+            name: `Description:`,
+            value: `
+            Shows someone's PP size.
+            
+            **Usage:**
+            +pp (target)
+            +pp @shiba#2254`,
+            },
+        )
+        message.channel.send(pphelp)
+} 
+    if(args [0] == 'roast'){
+        const roasthelp = new Discord.MessageEmbed()
+        .setTitle('Command: +roast')
+        .setColor('#000000')
+        .setFooter('Embox Bot * made by shiba#2254',pfp)
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
+        .setDescription(`Requested by ${message.author}`)
+        .addFields(
+            { 
+            name: `Description:`,
+            value: `
+            Roasts someone.
+            
+            **Usage:**
+            +roast (target)
+            +roast @shiba#2254`,
+            },
+        )
+        message.channel.send(roasthelp)
+} 
+    if(args [0] == 'servers'){
+        const guildhelp = new Discord.MessageEmbed()
+        .setTitle('Command: +define')
+        .setColor('#000000')
+        .setFooter('Embox Bot * made by shiba#2254',pfp)
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
+        .setDescription(`Requested by ${message.author}`)
+        .addFields(
+            { 
+            name: `Description:`,
+            value: `
+            Displays what guilds the bot is in.
+            
+            **Usage:**
+            +servers`,
+            },
+        )
+        message.channel.send(guildhelp)
+} 
+        if(args [0] == 'love'){
+            const lovehelp = new Discord.MessageEmbed()
+            .setTitle('Command: +love')
+            .setColor('#000000')
+            .setFooter('Embox Bot * made by shiba#2254',pfp)
+            .setAuthor(message.author.username, message.author.displayAvatarURL())
+            .setDescription(`Requested by ${message.author}`)
+            .addFields(
+                { 
+                name: `Description:`,
+                value: `
+                Displays the love percentage of two individuals.
+                
+                **Usage:**
+                +love (target1) (target2)
+                +love @shiba#2254 @embox bot#7741
+                +love Jack Jill`,
+                },
+            )
+            message.channel.send(lovehelp)
+} 
+        
 }
 }   
