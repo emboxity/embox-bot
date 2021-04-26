@@ -1,9 +1,10 @@
 module.exports = {
     name:"simwelcome",
-    aliases: ['sw'],
-    desscription: "Simulates a welcome",
+    aliases: ['sim'],
+    desscription: "plays music in a voice channel.",
 
     run: (client, message, args) => {
+        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send("You do not the permission to do this!");
         message.channel.send('Simulated a member joining!')
         client.emit('guildMemberAdd', message.member)
 
