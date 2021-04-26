@@ -17,7 +17,7 @@ module.exports = {
         const options = [`got beamed`, `got raped`, `got decapitated in a plane crash`, 'was stung by hundreds of wasps',
     'got hit by a coconut','ate themselves to death','got trampled by a cow','got shot','died in their sleep peacfully',
 'died in a plane crash','got hit by a golf ball','was buried alive','jumped off a cliff','has developed an allergic reaction to some advil and died',
-'burnt in a house fire'];
+'burnt in a house fire',`Was eaten by a bear`];
         const kill = new Discord.MessageEmbed()
         .setColor('#000000')
         .setFooter('Embox Bot * made by shiba#2254',pfp)
