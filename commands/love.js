@@ -3,7 +3,7 @@ const pfp = `https://i.imgur.com/8yAwoai.png`
 
 module.exports = {
     name: 'love',
-    description: 'gimme love xoxo',
+    description: 'random cat image',
     run: async(client, message, args) =>{
         const target = message.mentions.members.first()
         const random = Math.floor(Math.random()*100)
@@ -24,7 +24,7 @@ module.exports = {
 
             const nohoes1 = new Discord.MessageEmbed() 
             .setTitle("Love meter 6000 :two_hearts:")
-            .setDescription(`${love2} ${love3}
+            .setDescription(`${love2} x ${love3}
             ${random}%
             :broken_heart: :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
             .setColor("#FF6347")
@@ -36,7 +36,7 @@ module.exports = {
         
             const tenlove1 = new Discord.MessageEmbed() 
                 .setTitle("Love meter 6000 :two_hearts:")
-                .setDescription(`${love2} ${love3}
+                .setDescription(`${love2} x ${love3}
                 ${random}%
                 :heart: :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
                 .setColor("#FF6347")
@@ -46,7 +46,7 @@ module.exports = {
         
                 const twentylove1 = new Discord.MessageEmbed() 
                 .setTitle("Love meter 6000 :two_hearts:")
-                .setDescription(`${love2} ${love3}
+                .setDescription(`${love2} x ${love3}
                 ${random}%
                 :heart: :heart: :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
                 .setColor("#FF6347")
@@ -57,7 +57,7 @@ module.exports = {
                 
                 const thirtylove1 = new Discord.MessageEmbed() 
                 .setTitle("Love meter 6000 :two_hearts:")
-                .setDescription(`${love2} ${love3}
+                .setDescription(`${love2} x ${love3}
                 ${random}%
                 :heart: :heart: :heart: :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
                 .setColor("#FF6347")
@@ -68,7 +68,7 @@ module.exports = {
                 
                 const fourtylove1 = new Discord.MessageEmbed() 
                 .setTitle("Love meter 6000 :two_hearts:")
-                .setDescription(`${love2} ${love3}
+                .setDescription(`${love2} x ${love3}
                 ${random}%
                 :heart: :heart: :heart: :heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
                 .setColor("#FF6347")
@@ -78,7 +78,7 @@ module.exports = {
         
                 const fiftylove1 = new Discord.MessageEmbed() 
                 .setTitle("Love meter 6000 :two_hearts:")
-                .setDescription(`${love2} ${love3}
+                .setDescription(`${love2} x ${love3}
                 ${random}%
                 :heart: :heart: :heart: :heart:  :heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
                 .setColor("#FF6347")
@@ -88,7 +88,7 @@ module.exports = {
         
                 const sixtylove1 = new Discord.MessageEmbed() 
                 .setTitle("Love meter 6000 :two_hearts:")
-                .setDescription(`${love2} ${love3}
+                .setDescription(`${love2} x ${love3}
                 ${random}%
                 :heart: :heart: :heart: :heart:  :heart:  :heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
                 .setColor("#FF6347")
@@ -98,7 +98,7 @@ module.exports = {
         
                 const seventylove1 = new Discord.MessageEmbed() 
                 .setTitle("Love meter 6000 :two_hearts:")
-                .setDescription(`${love2} ${love3}
+                .setDescription(`${love2} x ${love3}
                 ${random}%
                 :heart: :heart: :heart: :heart:  :heart:  :heart:  :heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
                 .setColor("#FF6347")
@@ -108,7 +108,7 @@ module.exports = {
         
                 const eightylove1 = new Discord.MessageEmbed() 
                 .setTitle("Love meter 6000 :two_hearts:")
-                .setDescription(`${love2} ${love3}
+                .setDescription(`${love2} x ${love3}
                 ${random}%
                 :heart: :heart: :heart: :heart:  :heart:  :heart:  :heart:  :heart:  :broken_heart:  :broken_heart: `)
                 .setColor("#FF6347")
@@ -118,7 +118,7 @@ module.exports = {
         
                 const nintylove1 = new Discord.MessageEmbed() 
                 .setTitle("Love meter 6000 :two_hearts:")
-                .setDescription(`${love2} ${love3}
+                .setDescription(`${love2} x ${love3}
                 ${random}%
                 :heart: :heart: :heart: :heart:  :heart:  :heart:  :heart:  :heart:  :heart:  :broken_heart: `)
                 .setColor("#FF6347")
@@ -129,7 +129,7 @@ module.exports = {
                 
                 const fulllove1 = new Discord.MessageEmbed() 
                 .setTitle("Love meter 6000 :two_hearts:")
-                .setDescription(`${love2} ${love3}
+                .setDescription(`${love2} x ${love3}
                 ${random}%
                 :heart: :heart: :heart: :heart:  :heart:  :heart:  :heart:  :heart:  :heart:  :heart: `)
                 .setColor("#FF6347")
@@ -188,7 +188,7 @@ module.exports = {
 
         const nohoes = new Discord.MessageEmbed() 
         .setTitle("Love meter 6000 :two_hearts:")
-        .setDescription(`${love1} ${love2}
+        .setDescription(`${love1} x ${love2}
         ${random}%
         :broken_heart: :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
         .setColor("#FF6347")
@@ -200,7 +200,7 @@ module.exports = {
 
         const tenlove = new Discord.MessageEmbed() 
             .setTitle("Love meter 6000 :two_hearts:")
-            .setDescription(`${love1} ${love2}
+            .setDescription(`${love1} x ${love2}
             ${random}%
             :heart: :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
             .setColor("#FF6347")
@@ -210,7 +210,7 @@ module.exports = {
 
             const twentylove = new Discord.MessageEmbed() 
             .setTitle("Love meter 6000 :two_hearts:")
-            .setDescription(`${love1} ${love2}
+            .setDescription(`${love1} x ${love2}
             ${random}%
             :heart: :heart: :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
             .setColor("#FF6347")
@@ -221,7 +221,7 @@ module.exports = {
             
             const thirtylove = new Discord.MessageEmbed() 
             .setTitle("Love meter 6000 :two_hearts:")
-            .setDescription(`${love1} ${love2}
+            .setDescription(`${love1} x ${love2}
             ${random}%
             :heart: :heart: :heart: :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
             .setColor("#FF6347")
@@ -232,7 +232,7 @@ module.exports = {
             
             const fourtylove = new Discord.MessageEmbed() 
             .setTitle("Love meter 6000 :two_hearts:")
-            .setDescription(`${love1} ${love2}
+            .setDescription(`${love1} x ${love2}
             ${random}%
             :heart: :heart: :heart: :heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
             .setColor("#FF6347")
@@ -242,7 +242,7 @@ module.exports = {
 
             const fiftylove = new Discord.MessageEmbed() 
             .setTitle("Love meter 6000 :two_hearts:")
-            .setDescription(`${love1} ${love2}
+            .setDescription(`${love1} x ${love2}
             ${random}%
             :heart: :heart: :heart: :heart:  :heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
             .setColor("#FF6347")
@@ -252,7 +252,7 @@ module.exports = {
 
             const sixtylove = new Discord.MessageEmbed() 
             .setTitle("Love meter 6000 :two_hearts:")
-            .setDescription(`${love1} ${love2}
+            .setDescription(`${love1} x ${love2}
             ${random}%
             :heart: :heart: :heart: :heart:  :heart:  :heart:  :broken_heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
             .setColor("#FF6347")
@@ -262,7 +262,7 @@ module.exports = {
 
             const seventylove = new Discord.MessageEmbed() 
             .setTitle("Love meter 6000 :two_hearts:")
-            .setDescription(`${love1} ${love2}
+            .setDescription(`${love1} x ${love2}
             ${random}%
             :heart: :heart: :heart: :heart:  :heart:  :heart:  :heart:  :broken_heart:  :broken_heart:  :broken_heart: `)
             .setColor("#FF6347")
@@ -272,7 +272,7 @@ module.exports = {
 
             const eightylove = new Discord.MessageEmbed() 
             .setTitle("Love meter 6000 :two_hearts:")
-            .setDescription(`${love1} ${love2}
+            .setDescription(`${love1} x ${love2}
             ${random}%
             :heart: :heart: :heart: :heart:  :heart:  :heart:  :heart:  :heart:  :broken_heart:  :broken_heart: `)
             .setColor("#FF6347")
@@ -282,7 +282,7 @@ module.exports = {
 
             const nintylove = new Discord.MessageEmbed() 
             .setTitle("Love meter 6000 :two_hearts:")
-            .setDescription(`${love1} ${love2}
+            .setDescription(`${love1} x ${love2}
             ${random}%
             :heart: :heart: :heart: :heart:  :heart:  :heart:  :heart:  :heart:  :heart:  :broken_heart: `)
             .setColor("#FF6347")
@@ -293,7 +293,7 @@ module.exports = {
             
             const fulllove = new Discord.MessageEmbed() 
             .setTitle("Love meter 6000 :two_hearts:")
-            .setDescription(`${love1} ${love2}
+            .setDescription(`${love1} x ${love2}
             ${random}%
             :heart: :heart: :heart: :heart:  :heart:  :heart:  :heart:  :heart:  :heart:  :heart: `)
             .setColor("#FF6347")
