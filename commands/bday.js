@@ -1,10 +1,9 @@
 const Discord = require('discord.js');
 const pfp = `https://i.imgur.com/8yAwoai.png`
-const db = require('quick.db');
 module.exports = {
     name: 'happy birthday',
     aliases: 'hbday',
-    description: "Displays country info.",
+    description: "Wishes someone happy birthday.",
     run: async (client, message, args) => {
         const target = message.mentions.members.first();
 
