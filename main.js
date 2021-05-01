@@ -1,4 +1,10 @@
+const Discord = require(`discord.js`);
+const client = new Discord.Client();
+client.cooldowns = new Discord.Collection();
+
 require("dotenv").config()
+
+globalThis.queries = []
 
 const fs = require('fs');
 
@@ -7,11 +13,10 @@ const myEnmap = new Enmap();
 
 welcomechannel = new Enmap({ name: "welcomechannel" });
 
-const Discord = require('discord.js');
 
 const prefix = '+'
 
-const client = new Discord.Client();
+
 client.commands=new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (const file of commandFiles){
@@ -110,39 +115,64 @@ client.on('message', message => {
         message.channel.send('pong')
     }
 
-    
+    const moosg = message.content.toLowerCase()
+    switch(moosg){
 
-    if(message.content=='mtv'){
+    case "mtv":
         message.channel.send('ghosted')
-    }
+    break;
 
-    if(message.content.startsWith('apurv')){ 
+    case "apurv":
         message.channel.send('kappa')
-    }
+    break;
 
-     if(message.content=='simii'){
+     case "simi":
         message.channel.send('https://cdn.discordapp.com/attachments/667540944433840158/830896880980328508/UhHIDLUG6ImH_h1q.mp4')
-    }
+    break;
 
-    if(message.content=='bigcdg'){
+    case "bigcdg":
         message.channel.send('https://tenor.com/view/english-bodybuilders-fitness-fit-muscle-men-muscular-gif-16976467')
-    }
+    break;
 
-    if(message.content=='step bro'){
+    case "step bro":
         message.channel.send('im stuck')
-    }
+    break;
 
-    if(message.content=='nathan'){
+    case "nathan":
         message.channel.send('https://tenor.com/view/buzz-lightyear-no-sign-of-intelligent-life-dumb-toy-story-gif-11489315')
-    }
+    break;
+
+}
 
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
 
+
+
     const command = client.commands.get(commandName)
     || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
     if (!command) return;
+    const { cooldowns } = client;
+
+        if (!cooldowns.has(command.name)) {
+            cooldowns.set(command.name, new Discord.Collection());
+        }
+
+        const now = Date.now();
+        const timestamps = cooldowns.get(command.name);
+        const cooldownAmount = (command.cooldown || 3) * 1000;
+
+        if (timestamps.has(message.author.id)) {
+            const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
+        
+            if (now < expirationTime) {
+                const timeLeft = (expirationTime - now) / 1000;
+                return message.reply(`please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`);
+            }
+        }
+        timestamps.set(message.author.id, now);
+        setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
     try{
         command.run(message.client, message, args);
     } catch (error){
@@ -150,6 +180,7 @@ client.on('message', message => {
         console.log(price)
         message.reply('There was an error trying to execute this command')
     } 
+
 
     
     if (message.author.bot || !message.guild) return;
@@ -178,4 +209,4 @@ client.on('message', message => {
 
 })
 
-
+client.login(process.env.DISCORD_TOKEN)
