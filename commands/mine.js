@@ -9,7 +9,7 @@ module.exports = {
         db.add('times.mine', 1); 
         const timesUsed = db.get('times.mine');
         
-        var ores = [":diamond_shape_with_a_dot_inside:", ":diamonds:", ":large_blue_diamond:", ":large_orange_diamond:", ":small_blue_diamond:", ":small_orange_diamond:"];
+        var ores = [":diamond_shape_with_a_dot_inside:", ":diamonds:", ":large_blue_diamond:", ":large_orange_diamond:", ":small_blue_diamond:", ":small_orange_diamond:", "Couldn't find anything of any significant value."];
         var oreResult = Math.floor((Math.random() * ores.length));
 
 
@@ -17,6 +17,7 @@ module.exports = {
         .setDescription(":hammer_pick: We are at the cave. React with :pick: if you are ready to go into the mines, or react with :x: if you don't want to.")
         .setColor("#add8e6")
         .setFooter('Embox Bot * made by shiba#2254',pfp)
+
         
         const reactionmessage =  await message.channel.send(mineReact)
 
@@ -39,7 +40,7 @@ module.exports = {
                     async function formine() {
                     const mineEmbed = new Discord.MessageEmbed()
                     .setTitle(`Mine Results`)
-                    .addField('Shiny.',ores[oreResult])
+                    .addField('I just came out of the mine.', ores[oreResult])
                     .setColor("#add8e6")
                     .setFooter(`${timesUsed} uses`)
                     .setAuthor(message.author.username, message.author.displayAvatarURL())
@@ -52,6 +53,8 @@ module.exports = {
         
                     }
                     return formine()
+
+                  
         
         
                   case "❌":
