@@ -105,12 +105,29 @@ client.on('ready', () =>{
 
                 channel.send(msgEmbed)
                 newMember.send(`Welcome to ${guild}. I hope you enjoy your time here!`); 
+
+                
             
         })
+
+        
 
 
 
 client.on('message', message => {
+
+    if(message.channel.type === 'dm') {
+        const channel = client.channels.cache.get('839255110310953053')
+        const emb = new Discord.MessageEmbed()
+        .setTitle(`New Private Message Sent by ${message.author.tag}!`)
+        .setThumbnail(`${message.author.displayAvatarURL({ dynamic: true })}`)
+        .setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL({ dynamic: true})}`)
+        .setDescription(`${message.content}`)
+        .setTimestamp()
+        channel.send(emb)
+
+    }
+
     if(message.content=='ping'){
         message.channel.send('pong')
     }
@@ -125,6 +142,10 @@ client.on('message', message => {
     case "apurv":
         message.channel.send('kappa')
     break;
+
+    case "kys":
+        message.channel.send('**in game**')
+    break;    
 
      case "simi":
         message.channel.send('https://cdn.discordapp.com/attachments/667540944433840158/830896880980328508/UhHIDLUG6ImH_h1q.mp4')
@@ -209,4 +230,4 @@ client.on('message', message => {
 
 })
 
-client.login(process.env.DISCORD_TOKEN)
+client.login()
