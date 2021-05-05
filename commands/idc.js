@@ -1,6 +1,6 @@
 module.exports = {
     name:"idc",
-    desscription: "Shows a targets PP size.",
+    desscription: "Nobody cares.",
 
     run: (client, message, args) => {
         message.channel.send('nobody cares bro')
