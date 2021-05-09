@@ -4,6 +4,7 @@ module.exports = {
     name: 'avatar',
     description: "grabs an avatar for a user",
     aliases: 'av',
+    cooldown: 2.5,
     run: async(client, message, args) => {
 
 
