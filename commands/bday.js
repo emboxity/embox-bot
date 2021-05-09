@@ -4,7 +4,7 @@ const db = require('quick.db');
 module.exports = {
     name: 'happy birthday',
     aliases: 'hbday',
-    description: "Displays country info.",
+    description: "Tells someone happy birthday!",
     run: async (client, message, args) => {
         const target = message.mentions.members.first();
 
