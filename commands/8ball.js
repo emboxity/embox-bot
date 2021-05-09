@@ -4,6 +4,7 @@ require('discord-reply');
 module.exports = {
     name: '8ball',
     description: "Gives an 8ball generated response to a question",
+    cooldown: 2,
     run: async (client, message, args) => {
 
         if (!args[0]){
