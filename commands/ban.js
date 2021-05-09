@@ -3,6 +3,7 @@ const pfp = `https://i.imgur.com/8yAwoai.png`
 module.exports = {
     name: 'ban',
     description: 'bans a user from a guild.',
+    cooldown: 1.5,
     run: async(client, message, args) =>{
         if(!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("You do not the permission to do this!");
         const user = message.mentions.users.first();
