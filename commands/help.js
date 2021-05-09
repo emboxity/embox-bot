@@ -64,7 +64,7 @@ module.exports = {
             { 
                 name: `Aliases:`,
                 value: `
-                ${command.aliases?.join(', ') || 'No Aliases'}.
+                ${command.aliases?.join(', ') || 'No Aliases.'}
                 
                 **Cooldown:**
                 ${command.cooldown || 'No Cooldown.'}`,
