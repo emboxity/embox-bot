@@ -1,8 +1,14 @@
+const Discord = require(`discord.js`);
+const pfp = `https://i.imgur.com/8yAwoai.png`
+
 module.exports = {
     name: 'beattheshitoutof',
+    cooldown: 2.5,
     description: "beats someone up",
     run: async (client, message, args) => {
         const target=message.mentions.members.first()
+    
+        
         if(!args[1] == !target){
             const beatuperror = new Discord.MessageEmbed()
             .setDescription(":no_entry_sign: Please actually tag someone to beat the shit out of.")
