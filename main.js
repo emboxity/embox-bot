@@ -17,7 +17,7 @@ welcomechannel = new Enmap({ name: "welcomechannel" });
 const prefix = '+'
 
 
-client.commands=new Discord.Collection();
+client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (const file of commandFiles){
     const command = require(`./commands/${file}`);
@@ -126,8 +126,6 @@ client.on('message', message => {
         .setTimestamp()
         channel.send(emb)
 
-    }
-
     if(message.content=='ping'){
         message.channel.send('pong')
     }
@@ -163,7 +161,7 @@ client.on('message', message => {
         message.channel.send('https://tenor.com/view/buzz-lightyear-no-sign-of-intelligent-life-dumb-toy-story-gif-11489315')
     break;
 
-}
+}}
 
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -184,6 +182,8 @@ client.on('message', message => {
         const timestamps = cooldowns.get(command.name);
         const cooldownAmount = (command.cooldown || 3) * 1000;
 
+        
+
         if (timestamps.has(message.author.id)) {
             const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
         
@@ -194,6 +194,7 @@ client.on('message', message => {
         }
         timestamps.set(message.author.id, now);
         setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
+        
     try{
         command.run(message.client, message, args);
     } catch (error){
@@ -202,6 +203,7 @@ client.on('message', message => {
         message.reply('There was an error trying to execute this command')
     } 
 
+    
 
     
     if (message.author.bot || !message.guild) return;
@@ -230,4 +232,4 @@ client.on('message', message => {
 
 })
 
-client.login()
+client.login(processes.env.DISCORD_TOKEN);
