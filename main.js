@@ -43,8 +43,8 @@ client.on('ready', () =>{
         client.user.setPresence({
             status: "idle",
             activity: {
-                name: 'with embox | 🔨👷 ',
-                type: 'PLAYING',
+                name: `${client.guilds.cache.size} servers! | 🔨👷`,
+                type: 'WATCHING',
             }
         });
 
@@ -116,6 +116,8 @@ client.on('ready', () =>{
 
 client.on('message', message => {
 
+    
+
     if(message.channel.type === 'dm') {
         const channel = client.channels.cache.get('839255110310953053')
         const emb = new Discord.MessageEmbed()
@@ -126,42 +128,46 @@ client.on('message', message => {
         .setTimestamp()
         channel.send(emb)
 
-    if(message.content=='ping'){
-        message.channel.send('pong')
+    }
+    
+        const moosg = message.content.toLowerCase()
+        switch(moosg){
+    
+
+        case "ping":
+            message.channel.send('Pong!')
+        break;
+
+        case "mtv":
+            message.channel.send('ghosted')
+        break;
+    
+        case "apurv":
+            message.channel.send('kappa')
+        break;
+    
+        case "kys":
+            message.channel.send('**in game**')
+        break;    
+    
+         case "simi":
+            message.channel.send('https://cdn.discordapp.com/attachments/667540944433840158/830896880980328508/UhHIDLUG6ImH_h1q.mp4')
+        break;
+    
+        case "bigcdg":
+            message.channel.send('https://tenor.com/view/english-bodybuilders-fitness-fit-muscle-men-muscular-gif-16976467')
+        break;
+    
+        case "step bro":
+            message.channel.send('im stuck')
+        break;
+    
+        case "nathan":
+            message.channel.send('https://tenor.com/view/buzz-lightyear-no-sign-of-intelligent-life-dumb-toy-story-gif-11489315')
+        break;
+    
     }
 
-    const moosg = message.content.toLowerCase()
-    switch(moosg){
-
-    case "mtv":
-        message.channel.send('ghosted')
-    break;
-
-    case "apurv":
-        message.channel.send('kappa')
-    break;
-
-    case "kys":
-        message.channel.send('**in game**')
-    break;    
-
-     case "simi":
-        message.channel.send('https://cdn.discordapp.com/attachments/667540944433840158/830896880980328508/UhHIDLUG6ImH_h1q.mp4')
-    break;
-
-    case "bigcdg":
-        message.channel.send('https://tenor.com/view/english-bodybuilders-fitness-fit-muscle-men-muscular-gif-16976467')
-    break;
-
-    case "step bro":
-        message.channel.send('im stuck')
-    break;
-
-    case "nathan":
-        message.channel.send('https://tenor.com/view/buzz-lightyear-no-sign-of-intelligent-life-dumb-toy-story-gif-11489315')
-    break;
-
-}}
 
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -173,10 +179,16 @@ client.on('message', message => {
     || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
     if (!command) return;
     const { cooldowns } = client;
-
+    
+    if (command.guildOnly && message.channel.type === 'dm') {
+        return message.reply('I can\'t execute that command inside DMs!');
+    }
+    
         if (!cooldowns.has(command.name)) {
             cooldowns.set(command.name, new Discord.Collection());
         }
+
+
 
         const now = Date.now();
         const timestamps = cooldowns.get(command.name);
@@ -218,7 +230,7 @@ client.on('message', message => {
         if(args2 == ""){
             const errorembed = new Discord.MessageEmbed()
             .setDescription(":no_entry_sign: Incorrect usage. +price (stock)")
-            .setColor("#ff0808")
+            .setColor("#ff6961")
             .setFooter('Embox Bot * made by shiba#2254',pfp)
             message.channel.send(errorembed)
             return
@@ -232,4 +244,5 @@ client.on('message', message => {
 
 })
 
-client.login(processes.env.DISCORD_TOKEN);
+client.login(processes.ENV.DISCORD_TOKEN)
+
