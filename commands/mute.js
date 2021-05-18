@@ -30,6 +30,10 @@ module.exports = {
         console.log(`Reason is:${reason}`)
 
 
+        if(isNaN(args[0]) && !target){
+            return message.channel.send('no');
+        }
+
     
 
         // perms
